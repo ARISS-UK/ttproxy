@@ -1,0 +1,14 @@
+[Unit]
+Description=Tutioune Webmonitor Proxy
+After=syslog.target
+
+[Service]
+Type=simple
+User=www-data
+ExecStart={{directory}}/ttproxy
+WorkingDirectory={{directory}}
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
